@@ -1,0 +1,36 @@
+---
+title: "RMarkdownPractice"
+author: "Sachit Patel"
+date: "2023-12-06"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+## Load & Clean
+```{r}
+library(ggplot2)
+library(ggpubr)
+library(backports)
+library(tidyverse)
+library(here)
+library(lubridate)
+
+```
+## Dataset of Choice
+```{r}
+ds <- mtcars
+View(ds)
+```
+
+## Scatter Plots 
+###### This is a sample of practice with scatterplot visualizations using a default R dataset. The output plots are not meant to be explanatory or intend to hold any signficiant meaning.
+
+```{r}
+ds %>%
+  ggplot(aes(mpg, hp)) + geom_point() + labs(x = "miles per gallon", y = "horsepower",
+                                             title = 'Sample Plot in RMarkdown')
+
+```
+
